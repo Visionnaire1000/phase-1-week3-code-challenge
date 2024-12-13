@@ -18,9 +18,11 @@ To get started with the Flatdango application locally:
 
 1. Fork then clone this repository to your local machine:
 
-2. Navigate to the project folder and open the folder in a code editor eg VS code.
+2.Navigate to the project folder of the local repo.
 
-3. Open the `index.html` file in your preferred browser.
+3. Install json server(npm install -g json-server),then activate it (json-server --watch db.json).
+
+4. Open the `index.html` file in your preferred browser.
 
 
 ## Usage
