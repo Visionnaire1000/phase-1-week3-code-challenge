@@ -5,12 +5,12 @@ Flatdango is a simple movie ticket booking application for the **Flatiron Movie 
 
 ## Features
 
-- View the details of the first movie on the page load, including its **poster**, **title**, **runtime**, **showtime**, and **available tickets**.
-- A menu of all available movies that users can select to view more details.
-- Ability to purchase tickets, which decreases the number of available tickets. 
-- If a movie's showing is sold out, users will be notified by a "Sold Out" button.
-- Clicking on a movie in the menu updates the main movie details to reflect the selected movie.
-- Sold-out movies are highlighted and users can no longer buy tickets for them.
+1. View the details of the first movie on the page load, including its **poster**, **title**, **runtime**, **showtime**, and **available tickets**.
+2. A menu of all available movies that users can select to view more details.
+3. Ability to purchase tickets, which decreases the number of available tickets. 
+4. If a movie's showing is sold out, users will be notified by a "Sold Out" button.
+5. Clicking on a movie in the menu updates the main movie details to reflect the selected movie.
+6. Sold-out movies are highlighted and users can no longer buy tickets for them.
 
 ## Installation
 
@@ -18,11 +18,13 @@ To get started with the Flatdango application locally:
 
 1. Fork then clone this repository to your local machine:
 
-2.Navigate to the project folder of the local repo.
+2. Install json-server(npm install -g json-server).
 
-3. Install json server(npm install -g json-server),then activate it (json-server --watch db.json).
+4. Navigate to the project folder of the local repo.
 
-4. Open the `index.html` file in your preferred browser.
+5. Activate the json-server. (json-server --watch db.json).
+
+6. Open the index.html file in your preferred browser.
 
 
 ## Usage
@@ -42,6 +44,5 @@ The application interacts with the following API endpoints to retrieve movie dat
 
 - **Get All Movies**: `GET /films`
   
-## GitHub Pages
- -https://visionnaire1000.github.io/phase-1-week3-code-challenge/
+
     
