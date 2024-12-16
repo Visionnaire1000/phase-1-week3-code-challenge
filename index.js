@@ -13,22 +13,28 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentMovie = {};
 
     // Fetch all movies
-    fetch(BASE_URL)
-        .then(response => response.json())
-        .then(films => {
-            filmsList.innerHTML = ""; // Clear placeholder
-            films.forEach(film => {
-                const li = document.createElement("li");
-                li.textContent = film.title;
-                li.className = "film item";
-                li.addEventListener("click", () => loadMovieDetails(film));
-                if (film.capacity - film.tickets_sold <= 0) {
-                    li.classList.add("sold-out");
-                }
-                filmsList.appendChild(li);
-            });
-            loadMovieDetails(films[0]); // Load first movie details by default
+  fetch(BASE_URL, {
+    method: 'GET' })
+    .then(response => response.json())
+    .then(films => {
+        filmsList.innerHTML = ""; // Clear placeholder
+        films.forEach(film => {
+            const li = document.createElement("li");
+            li.textContent = film.title;
+            li.className = "film item";
+            li.addEventListener("click", () => loadMovieDetails(film));
+            if (film.capacity - film.tickets_sold <= 0) {
+                li.classList.add("sold-out");
+            }
+            filmsList.appendChild(li);
         });
+        loadMovieDetails(films[0]); // Load first movie details by default
+    })
+    .catch(error => {
+        console.error("Error fetching films:", error);
+    });
+
+
 
     // Load movie details
     function loadMovieDetails(film) {
