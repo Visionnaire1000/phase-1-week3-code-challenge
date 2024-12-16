@@ -38,10 +38,8 @@ To get started with the Flatdango application locally:
 4. **Sold Out Movies**: Once a movie is sold out (i.e., all tickets are sold), it will be marked as "sold-out" in the menu, and users will no longer be able to buy tickets for that movie.
 
 
-## API Endpoints
-
-The application interacts with the following API endpoints to retrieve movie data:
-
+## API Documentation
+- **Base URL**: http://localhost:3000/films
 - **Get All Movies**: `GET /films`
   
 
